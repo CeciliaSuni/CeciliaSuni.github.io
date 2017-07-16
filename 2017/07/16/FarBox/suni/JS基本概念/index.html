@@ -93,13 +93,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://CeciliaSuni.github.io/categories/index.html">
+<meta name="description" content="JS变量，函数，作用域和内存中需要注意的问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS基本概念">
+<meta property="og:url" content="http://CeciliaSuni.github.io/2017/07/16/FarBox/suni/JS基本概念/index.html">
 <meta property="og:site_name" content="Cecilia&#39;s Blog">
-<meta property="og:updated_time" content="2017-07-15T12:07:34.288Z">
+<meta property="og:description" content="JS变量，函数，作用域和内存中需要注意的问题">
+<meta property="og:updated_time" content="2017-07-16T08:37:25.751Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="JS基本概念">
+<meta name="twitter:description" content="JS变量，函数，作用域和内存中需要注意的问题">
 
 
 
@@ -127,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://CeciliaSuni.github.io/categories/"/>
+  <link rel="canonical" href="http://CeciliaSuni.github.io/2017/07/16/FarBox/suni/JS基本概念/"/>
 
 
 
 
 
-  <title>categories | Cecilia's Blog</title>
+  <title>JS基本概念 | Cecilia's Blog</title>
   
 
 
@@ -280,25 +283,167 @@
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://CeciliaSuni.github.io/2017/07/16/FarBox/suni/JS基本概念/">
 
-</header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ceci Su">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cecilia's Blog">
+    </span>
 
     
-    
-      <div class="category-all-page">
-        <div class="category-all-title">
-            1 category in total
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JS基本概念</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-16T15:53:00+08:00">
+                2017-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  <blockquote class="blockquote-center"> JS变量，函数，作用域和内存中需要注意的问题 </blockquote>
+              </div>
+          
+
         </div>
-        <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li></ul>
-        </div>
-      </div>
+      </header>
     
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>#JS变量，函数，作用域和内存问题<br>1.ECMAScript中没有函数签名的概念，因为其函数参数是以一个包含零或多个值的数组形式传递的。可以向ECMAScript传递任意数量的参数，并且可以通过<code>arguments</code>对象来访问这些参数。由于不存在函数签名的特性，ECMAScript函数不能重载。<br>2.with语句的作用是将代码的作用域设置到一个特定的对象中。在with语句的代码块内部，每个变量首先被认为是一个局部变量，如果在局部环境中找不到该变量的定义，就会查询location对象中是否有同名属性。<code>严格模式下不允许使用with语句</code><br>3.函数定义时可以不指定是否返回值，因为任何ECMAScript函数都可以在任何时候返回任何值。实际上，未指定返回值的函数返回的是一个特殊的undefined值。<br>4.基本类型在内存中占据固定大小的空间，因此被保存在<code>栈内存</code>中，从一个变量向另一个变量复制基本类型的值，会创建这个值的一个<code>副本</code>；引用变量的值是对象，保存在<code>堆内存</code>中，从一个变量向另一个变量复制引用类型的值，复制的其实是指针，因此两个变量最终都指向<code>同一个对象</code>。<br>5.确定一个值是哪种基本类型可以使用<code>typeof</code>操作符，而确定一个值是哪种引用类型可以使用<code>instanceof</code>操作符。<br>6.执行环境有全局执行环境和函数执行环境之分；每次进入一个新的执行环境，都会创建一个用于搜索变量和函数的作用域链。JS没有<code>块级作用域</code>。<br>7.“标记清除”是目前主流的垃圾收集算法，这种算法的思想是给当前不使用的值加上标记，然后再回收其内存。另一个垃圾收集算法是“引用计数”，这种算法的思想是给当前不使用的值加上引用计数，当代码中存在循环引用现象时，引用计数算法就会导致问题。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        <blockquote class="blockquote-center">每天坚持学习</blockquote>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/08/FarBox/suni/self introduce/" rel="next" title="self introduce">
+                <i class="fa fa-chevron-left"></i> self introduce
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -497,10 +642,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
